@@ -1,0 +1,30 @@
+@use "../../../assets/scss/color" as colors;
+@use "../../../assets/scss/config" as config;
+@use "../../../assets/scss/mixin" as mixin;
+@use "../../../assets/scss/font" as fonts;
+
+.clients {
+  &__list {
+    margin-top: 3.5rem;
+    &-item {
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+// ---------------------------
+// Our Former Clients
+// tablet > 834px
+// ---------------------------
+@media screen and (min-width: #{config.$breakpoint-tablet}px) {
+}
+
+// ---------------------------
+// Our Former Clients
+// tablet > 1366px
+// ---------------------------
+@media screen and (min-width: #{config.$breakpoint-desktop}px) {
+}

@@ -1,0 +1,117 @@
+@use "./assets/scss/font.scss" as fonts;
+@use "./assets/scss//config.scss" as config;
+@use "./assets/scss/color.scss" as colors;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: fonts.$fontFfamily;
+  font-size: fonts.$body1-font-size;
+}
+
+body {
+  background-color: colors.$color-background;
+  line-height: 22.4px;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: fonts.$semiBold-font-weight;
+  line-height: 28px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Reusable CSS */
+.container-section {
+  margin: 0 2.188rem;
+  margin-top: 7.5rem;
+}
+
+.section {
+  padding-top: 7.5rem;
+  // padding-bottom: 2rem;
+}
+
+.section__title {
+  font-size: fonts.$h4-font-size;
+  font-weight: fonts.$semiBold-font-weight;
+  line-height: 28px;
+  margin-bottom: 0.5rem;
+  color: fonts.$title-color;
+  text-align: center;
+}
+
+.section__subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31.2px;
+  color: fonts.$subtitle-color;
+  text-align: center;
+}
+
+main,
+header,
+nav {
+  max-width: 1216px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: #{config.$breakpoint-tablet}px) {
+  .section__title {
+    font-size: fonts.$h3-font-size;
+    line-height: 31.2px;
+    text-align: left;
+  }
+
+  .section__subtitle {
+    font-size: 30px;
+    line-height: 39px;
+    text-align: left;
+  }
+  .container-section {
+    margin: 0 4.688rem;
+    margin-top: 13.75rem;
+  }
+}
+
+@media screen and (min-width: #{config.$breakpoint-desktop}px) {
+  .container-section {
+    margin: 0 0;
+    margin-top: 13.75rem;
+  }
+}

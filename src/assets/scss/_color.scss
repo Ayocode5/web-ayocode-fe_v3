@@ -1,0 +1,68 @@
+/* ================ Color Template ================= */
+
+$color-primary: (
+  "10": #f6f4f2,
+  "30": #e3dfd9,
+  "50": #d0c9c0,
+  "70": #9e968c,
+  "90": #6c6358,
+);
+
+$color-secondary: (
+  "10": #9d7cc3,
+  "30": #6a4b8e,
+  "50": #371b58,
+  "70": #211035,
+  "90": #0b0512,
+);
+
+$color-tertiary: (
+  "10": #dcf6f3,
+  "30": #dcf6f3,
+  "50": #4fd3c4,
+  "70": #328a80,
+  "90": #15413c,
+);
+
+$color-neutral: (
+  "10": #878787,
+  "30": #545454,
+  "50": #212121,
+  "70": #141414,
+  "90": #070707,
+);
+
+$color-success: (
+  "10": #abd2ae,
+  "30": #70a775,
+  "50": #357c3c,
+  "70": #204a24,
+  "90": #0b190c,
+);
+
+$color-warning: (
+  "10": #fff5d7,
+  "30": #ffe188,
+  "50": #ffcd38,
+  "70": #af8c22,
+  "90": #604b0b,
+);
+
+$color-error: (
+  "10": #ffdbdb,
+  "50": #ff4949,
+  "70": #b62c2c,
+  "90": #6d0f0f,
+);
+
+/* ==================== Base Color ==================== */
+$color-background: map-get($color-primary, "50");
+
+/* ============= Export to Javascript ================ */
+:export {
+  redParticle: map-get($color-error, "50");
+  greenParticle: map-get($color-tertiary, "50");
+  darkGreenParticle: map-get($color-success, "30");
+  yellowParticle: map-get($color-warning, "30");
+  iconPrimary: map-get($color-primary, "10");
+}

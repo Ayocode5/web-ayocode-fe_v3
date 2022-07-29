@@ -1,0 +1,265 @@
+@use "../../../assets/scss/color.scss" as colors;
+@use "../../../assets/scss/config.scss" as config;
+@use "../../../assets/scss/mixin" as mixin;
+@use "../../../assets/scss/font.scss" as fonts;
+/*
+  Style for Navbar
+  powered by bootstrap 4.6
+*/
+$navbar__item-color: map-get(colors.$color-primary, "10");
+$navbar__item-active-color: map-get(colors.$color-secondary, "50");
+$navbar__hamburger-color: map-get(colors.$color-neutral, "50");
+$navbar__toggler-color: map-get(colors.$color-secondary, "30");
+$navbar__splash-color: map-get(colors.$color-secondary, "10");
+
+// Font size for navbar
+$navbar__font-size: 20px;
+$navbar__line-height: 28px;
+$navbar__font-weight: fonts.$semiBold-font-weight;
+
+// ---------------------------
+// Main Navigation Menu
+// Mobile and Tab < 1024px
+// ---------------------------
+.navbars {
+  @include mixin.flex-display(row, space-between, center);
+  position: relative;
+  z-index: 2;
+  margin: 0 2.188rem;
+  margin-top: 2rem;
+  font-size: $navbar__font-size;
+  font-weight: $navbar__font-weight;
+
+  &__menu {
+    @include mixin.flex-display(column, space-between, center);
+    position: absolute;
+    top: 140px;
+    left: 0;
+    right: 0;
+    transform: translateY(-400%);
+    column-gap: 1.25rem;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: $navbar__item-color;
+      font-weight: $navbar__font-weight;
+      &:focus {
+        color: $navbar__item-active-color;
+      }
+    }
+    .toggle-switch-lang {
+      cursor: pointer;
+      display: flex;
+
+      &__checkbox {
+        opacity: 0;
+      }
+
+      &__label {
+        position: relative;
+        background-color: $navbar__toggler-color;
+        border-radius: 30px;
+        border: 1px solid #e3dfd9;
+        padding: 8px 16px;
+      }
+      &__ball {
+        position: absolute;
+        background-color: $navbar__toggler-color;
+        border-radius: 50%;
+        width: 22px;
+        top: 7px;
+        left: 15px;
+        height: 22px;
+        transition: all 0.3s ease-in;
+
+        &::before {
+          content: "EN";
+          font-size: 14px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          text-align: center;
+          color: $navbar__item-color;
+        }
+      }
+      &__flag {
+        width: 20px;
+        height: 20px;
+      }
+      &__flags {
+        display: flex;
+        column-gap: 8px;
+      }
+      .switch-to-id {
+        transform: translateX(28px);
+        &::before {
+          content: "ID";
+        }
+      }
+    }
+  }
+
+  &__logo {
+    @include mixin.flex-display(row, space-between, center);
+    width: 100%;
+    z-index: 9;
+    .image-brand {
+      @include mixin.icon-sizing(
+        map-get(config.$icon-size, "48"),
+        map-get(config.$icon-size, "48")
+      );
+      align-self: flex-start;
+    }
+  }
+
+  // Hamburger Menu
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 45px;
+    z-index: 9;
+    cursor: pointer;
+
+    span {
+      background: $navbar__hamburger-color;
+      border-radius: 10px;
+      height: 5px;
+      margin: 5px 0;
+      transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+    span:nth-of-type(1) {
+      width: 50%;
+    }
+    span:nth-of-type(2) {
+      width: 100%;
+    }
+    span:nth-of-type(3) {
+      width: 75%;
+    }
+
+    &.open {
+      span:nth-of-type(1) {
+        transform-origin: bottom;
+        transform: rotatez(46deg) translate(6px, 1.3px);
+      }
+      span:nth-of-type(2) {
+        transform-origin: top;
+        transform: rotatez(-46deg);
+      }
+      span:nth-of-type(3) {
+        transform-origin: bottom;
+        width: 60%;
+        transform: translate(15.5px, -10px) rotatez(46deg);
+      }
+    }
+  }
+
+  &__button {
+    @include mixin.button-start();
+    width: 100%;
+  }
+
+  // Background splash Navbar Menu
+  &__bg-splash {
+    z-index: 7;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 1px;
+    height: 1px;
+    overflow-y: hidden;
+
+    &::after {
+      content: "";
+      z-index: 7;
+      display: block;
+      position: fixed;
+      border-radius: 50%;
+      background-color: $navbar__splash-color;
+      opacity: 0;
+
+      // screen diameter can be 142vmax at most,
+      // circle needs to be twice that size to cover it
+      width: 8vmax;
+      height: 8vmax;
+      top: 0vmax;
+      right: 0vmax;
+
+      transform: scale(0);
+      transform-origin: 50% 50%;
+      transition: all 0.5s ease-in-out;
+
+      // will-change tells the browser we plan to
+      // animate this property in the near future
+      will-change: transform;
+    }
+  }
+}
+
+// when open navbar menu
+.navbars-open {
+  .navbars__menu {
+    z-index: 9;
+    transition: 0.5s ease-in-out;
+    row-gap: 2.5rem;
+    transform: translateY(0) !important;
+  }
+
+  .navbars__bg-splash::after {
+    transform: scale(35);
+    opacity: 1;
+  }
+}
+
+// ---------------------------
+// Main Navigation Menu
+// Tablet > 834px
+// ---------------------------
+@media screen and (min-width: #{config.$breakpoint-tablet}px) {
+  .navbars {
+    margin: 0 4.688rem;
+    margin-top: 4.5rem;
+  }
+}
+
+// ---------------------------
+// Main Navigation Menu
+// Desktop > 1366px
+// ---------------------------
+@media screen and (min-width: #{config.$breakpoint-desktop}px) {
+  .navbars {
+    margin: 0 auto;
+    margin-top: 2rem;
+    flex-direction: row;
+    &__logo {
+      width: auto;
+      .image-brand {
+        @include mixin.icon-sizing(
+          map-get(config.$icon-size, "64"),
+          map-get(config.$icon-size, "64")
+        );
+      }
+    }
+    &__menu {
+      position: unset;
+      flex-direction: row;
+      column-gap: 2.5rem;
+
+      transform: translateY(0);
+    }
+    &__item {
+      width: auto;
+      a {
+        color: map-get(colors.$color-neutral, "50");
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}

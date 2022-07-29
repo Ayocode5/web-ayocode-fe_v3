@@ -1,0 +1,98 @@
+@use "color" as colors;
+@use "config" as config;
+/* ================================ Base Function Style ============================= */
+@mixin flex-display($direction: row, $justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin icon-sizing($width-icon: 32px, $height-icon: 32px) {
+  width: $width-icon;
+  height: $height-icon;
+}
+
+@mixin button-start {
+  box-shadow: none !important;
+  width: 194px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in;
+  border: none !important;
+  outline: none !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 8px;
+  background-color: transparent;
+  color: map-get(colors.$color-primary, "30");
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: scale(1, 1);
+    transition: all 0.3s;
+    background-color: map-get(colors.$color-secondary, "50");
+    border-radius: 5px;
+    z-index: -2;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: map-get(colors.$color-warning, "30");
+    transition: all 0.3s;
+    border-radius: 5px;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: map-get(colors.$color-secondary, "50");
+
+    &:before {
+      transform: scaleX(1);
+    }
+    &:after {
+      transform: scale(0.99, 0.99);
+    }
+  }
+}
+
+@mixin icon-social-media($size: 48px) {
+  .social-media-wrap-icon {
+    @include flex-display(row, center, center);
+    background-color: map-get(colors.$color-secondary, "50");
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+
+    svg {
+      z-index: 1;
+      color: map-get(colors.$color-primary, "10");
+    }
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 0px;
+      width: 0px;
+      border-radius: 50%;
+      transition: 0.35s ease-in-out;
+      opacity: 1;
+    }
+
+    &:hover::after {
+      height: 100%;
+      width: 100%;
+      box-shadow: inset 2px 2px 3px map-get(colors.$color-neutral, "70");
+    }
+  }
+}

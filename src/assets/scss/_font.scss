@@ -1,0 +1,35 @@
+// Font name : Kanit
+// Font Size : reguler, semi bold, bold, black
+// Powered by Google font
+@use "./color" as colors;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;900&display=swap");
+
+/* =============== Font Family =========== */
+$fontFfamily: "Kanit", sans-serif;
+
+/* =============== Font Size ============= */
+$h1-font-size: 40px;
+$h2-font-size: 30px;
+$h3-font-size: 24px;
+$h4-font-size: 20px;
+$h5-font-size: 16px;
+$h6-font-size: 12px;
+$h7-font-size: 10px;
+
+$paragraph-font-size: 20px;
+$body1-font-size: 16px;
+$body2-font-size: 14px;
+$body3-font-size: 12px;
+
+$caption1-font-size: 12px;
+$caption2-font-size: 10px;
+
+/* ================ Font Weight =================== */
+$small-font-weight: 400;
+$medium-font-weight: 600;
+$semiBold-font-weight: 700;
+$bold-font-weight: 900;
+
+/* =============== Font Color ============= */
+$title-color: map-get(colors.$color-secondary, "50");
+$subtitle-color: map-get(colors.$color-neutral, "50");

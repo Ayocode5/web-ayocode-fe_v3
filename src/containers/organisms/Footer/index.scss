@@ -1,0 +1,93 @@
+@use "../../../assets/scss/color" as colors;
+@use "../../../assets/scss/config" as config;
+@use "../../../assets/scss/mixin" as mixin;
+
+footer {
+  margin-top: 40px;
+  padding: 32px 0;
+  position: relative;
+  .waves {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    transform: rotate(0deg) !important;
+    top: unset !important;
+    bottom: 0 !important;
+  }
+}
+.footer {
+  margin: 0 2.188rem;
+  max-width: 1216px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+  color: map-get(colors.$color-neutral, "50");
+
+  &__copyright {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  &__socialmedia {
+    font-weight: 600;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      li {
+        a {
+          $color-icons: (
+            "instagram": map-get(colors.$color-error, "50"),
+            "wa": map-get(colors.$color-success, "50"),
+            "gmail": map-get(colors.$color-error, "70"),
+            "youtube": map-get(colors.$color-error, "50"),
+          );
+          @each $social, $color in $color-icons {
+            &.footer__icon-#{$social} .social-media-wrap-icon::after {
+              background-color: $color;
+            }
+          }
+          overflow: hidden;
+          position: relative;
+
+          @include mixin.icon-social-media(32px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:#{config.$breakpoint-tablet}px) {
+  footer {
+    margin-top: 220px;
+    border-top: 2px solid map-get(colors.$color-secondary, "50");
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 4.688rem;
+
+    &__socialmedia {
+      flex-direction: row;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (min-width:#{config.$breakpoint-desktop}px) {
+  .footer {
+    margin: 0 auto;
+  }
+}

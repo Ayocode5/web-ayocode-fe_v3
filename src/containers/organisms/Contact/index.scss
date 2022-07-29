@@ -1,0 +1,46 @@
+@use "../../../assets/scss/color" as colors;
+@use "../../../assets/scss/font" as fonts;
+@use "../../../assets/scss/config" as config;
+@use "../../../assets/scss/mixin" as mixin;
+
+.contact {
+  text-align: center;
+  h3 {
+    font-size: 1.875rem;
+    color: map-get(colors.$color-secondary, "50");
+    line-height: 39px;
+  }
+  p {
+    margin-top: 16px;
+    font-size: 20px;
+    color: map-get(colors.$color-neutral, "50");
+    line-height: 28px;
+  }
+
+  &__button {
+    @include mixin.button-start();
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: #{config.$breakpoint-tablet}px) {
+  .contact {
+    h3 {
+      font-size: 3.125rem;
+      line-height: 60px;
+    }
+    p {
+      margin-top: 8px;
+      max-width: 648px;
+      margin: 0 auto;
+      font-size: 1.875rem;
+      line-height: 39px;
+    }
+    &-button {
+      margin-top: 3.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: #{config.$breakpoint-tablet}px) {
+}
