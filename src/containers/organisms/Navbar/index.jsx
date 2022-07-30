@@ -22,7 +22,6 @@ export default function NavigationBar() {
 
   const handleClick = () => {
     dispatch(setIsOpen(false));
-    console.log("handleClick");
   };
   useEffect(() => {
     if (isDesktop) dispatch(setIsOpen(false));
