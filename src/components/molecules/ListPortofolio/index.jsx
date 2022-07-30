@@ -2,7 +2,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs, Controller } from "swiper";
-
 export default function ListPortofolio({ portofolios }) {
   const [activeThumb, setActiveThumb] = useState();
   const slider1 = useRef(null);

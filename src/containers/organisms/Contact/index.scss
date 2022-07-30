@@ -2,7 +2,14 @@
 @use "../../../assets/scss/font" as fonts;
 @use "../../../assets/scss/config" as config;
 @use "../../../assets/scss/mixin" as mixin;
+/*  ================
+    Style for Contact
+    ================ */
 
+// ---------------------------
+// Main Contact
+// Mobile
+// ---------------------------
 .contact {
   text-align: center;
   h3 {
@@ -23,6 +30,11 @@
     width: 100%;
   }
 }
+
+// ---------------------------
+// Main Contact
+// Tablet > 834px
+// ---------------------------
 @media screen and (min-width: #{config.$breakpoint-tablet}px) {
   .contact {
     h3 {
@@ -42,5 +54,9 @@
   }
 }
 
+// ---------------------------
+// Main Contact
+// Desktop > 1366px
+// ---------------------------
 @media screen and (min-width: #{config.$breakpoint-tablet}px) {
 }

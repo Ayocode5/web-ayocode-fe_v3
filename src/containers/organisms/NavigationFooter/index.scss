@@ -1,6 +1,13 @@
 @use "../../../assets/scss/color" as colors;
 @use "../../../assets/scss/config" as config;
+/*  ============================
+    Style for Navigations Footer
+    ============================ */
 
+// ---------------------------
+// Main Navigations Footer
+// Mobile
+// ---------------------------
 .nav-footer {
   text-align: center;
   h3 {

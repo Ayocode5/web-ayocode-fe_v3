@@ -1,6 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getEnLanguage, getIdLanguage } from "../../../utils/Data.js";
 
+const getLanguageFromLocalStorage = () => {
+  const language = localStorage.getItem("lang");
+  if (language === "Ind") {
+    return getIdLanguage();
+  } else {
+    return getEnLanguage();
+  }
+};
+
 const initialState = {
   isOpen: false,
   switchChecked: localStorage.getItem("lang")
@@ -9,9 +18,7 @@ const initialState = {
       : false
     : localStorage.setItem("lang", "Eng"),
   dataLanguage: localStorage.getItem("lang")
-    ? localStorage.getItem("lang") === "Ind"
-      ? getIdLanguage()
-      : getEnLanguage()
+    ? getLanguageFromLocalStorage()
     : localStorage.setItem("lang", "Eng"),
 };
 

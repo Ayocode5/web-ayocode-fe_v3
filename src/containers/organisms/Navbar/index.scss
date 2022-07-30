@@ -2,10 +2,9 @@
 @use "../../../assets/scss/config.scss" as config;
 @use "../../../assets/scss/mixin" as mixin;
 @use "../../../assets/scss/font.scss" as fonts;
-/*
-  Style for Navbar
-  powered by bootstrap 4.6
-*/
+/*  ================
+    Style for Navbar
+    ================ */
 $navbar__item-color: map-get(colors.$color-primary, "10");
 $navbar__item-active-color: map-get(colors.$color-secondary, "50");
 $navbar__hamburger-color: map-get(colors.$color-neutral, "50");
@@ -19,32 +18,31 @@ $navbar__font-weight: fonts.$semiBold-font-weight;
 
 // ---------------------------
 // Main Navigation Menu
-// Mobile and Tab < 1024px
+// Mobile
 // ---------------------------
 .navbars {
-  @include mixin.flex-display(row, space-between, center);
-  position: relative;
-  z-index: 2;
   margin: 0 2.188rem;
   margin-top: 2rem;
+  position: relative;
+  @include mixin.flex-display(row, space-between, center);
   font-size: $navbar__font-size;
   font-weight: $navbar__font-weight;
+  z-index: 2;
 
   &__menu {
-    @include mixin.flex-display(column, space-between, center);
     position: absolute;
     top: 140px;
     left: 0;
     right: 0;
-    transform: translateY(-400%);
+    @include mixin.flex-display(column, space-between, center);
     column-gap: 1.25rem;
+    transform: translateY(-400%);
   }
 
   &__item {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixin.flex-display(row, center, center);
+
     a {
       color: $navbar__item-color;
       font-weight: $navbar__font-weight;
@@ -62,27 +60,27 @@ $navbar__font-weight: fonts.$semiBold-font-weight;
 
       &__label {
         position: relative;
+        padding: 8px 16px;
         background-color: $navbar__toggler-color;
         border-radius: 30px;
         border: 1px solid #e3dfd9;
-        padding: 8px 16px;
       }
       &__ball {
         position: absolute;
-        background-color: $navbar__toggler-color;
-        border-radius: 50%;
         width: 22px;
         top: 7px;
         left: 15px;
         height: 22px;
+        background-color: $navbar__toggler-color;
+        border-radius: 50%;
         transition: all 0.3s ease-in;
 
         &::before {
           content: "EN";
-          font-size: 14px;
           position: absolute;
           left: 0;
           right: 0;
+          font-size: 14px;
           text-align: center;
           color: $navbar__item-color;
         }
@@ -166,21 +164,21 @@ $navbar__font-weight: fonts.$semiBold-font-weight;
 
   // Background splash Navbar Menu
   &__bg-splash {
-    z-index: 7;
     position: absolute;
     top: 40px;
     right: 40px;
     width: 1px;
     height: 1px;
+    z-index: 7;
     overflow-y: hidden;
 
     &::after {
       content: "";
-      z-index: 7;
-      display: block;
       position: fixed;
+      display: block;
       border-radius: 50%;
       background-color: $navbar__splash-color;
+      z-index: 7;
       opacity: 0;
 
       // screen diameter can be 142vmax at most,

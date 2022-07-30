@@ -1,7 +1,14 @@
 @use "../../../assets/scss/color.scss" as colors;
 @use "../../../assets/scss/mixin.scss" as mixin;
 @use "../../../assets/scss/config.scss" as config;
+/*  ================
+    Style for Agents
+    ================ */
 
+// ---------------------------
+// Main Agent
+// Mobile
+// ---------------------------
 .agents {
   margin: 0 35px;
   margin-top: 120px;
@@ -101,6 +108,10 @@
   }
 }
 
+// ---------------------------
+// Main Agents
+// Tablet > 834px
+// ---------------------------
 @media screen and (min-width: #{config.$breakpoint-tablet}px) {
   .agents {
     &__list {
@@ -142,5 +153,9 @@
   }
 }
 
+// ---------------------------
+// Main Agents
+// Desktop > 1366px
+// ---------------------------
 @media screen and (min-width: #{config.$breakpoint-tablet}px) {
 }

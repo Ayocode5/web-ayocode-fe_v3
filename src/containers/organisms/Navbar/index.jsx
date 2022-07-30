@@ -1,33 +1,27 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import useMediaQuery from "../../../hooks/useMediaQuery";
+import { useSelector, useDispatch } from "react-redux";
 import { setIsOpen } from "../../../config/redux/reducers/navbarReducer";
-
 import { BsArrowUpRight } from "react-icons/bs";
 import Brand from "../../../components/atoms/Brand";
 import ToggleSwitch from "../../../components/atoms/ToggleSwitch";
 import Hamburger from "../../../components/atoms/Hamburger";
 import Buttons from "../../../components/atoms/Buttons";
-
 import imgLogoAyocode from "../../../assets/img/logos/logo-ayocode.svg";
 import "./index.scss";
 
 export default function NavigationBar() {
   /* selector redux state */
   const { dataLanguage, isOpen } = useSelector((state) => state.navbar);
-
   const dispatch = useDispatch();
   /* Check desktop screen min width 1366px */
   const isDesktop = useMediaQuery(1366);
-
   /* Get content language from redux state */
   const { navbar } = dataLanguage;
-
   useEffect(() => {
     if (isDesktop) dispatch(setIsOpen(false));
   }, [dispatch, isDesktop]);
-
   return (
     <>
       {isDesktop ? (
@@ -51,7 +45,7 @@ export default function NavigationBar() {
               <a
                 className="navbars__link"
                 rel="noopener noreferrer"
-                href="#portofolio"
+                href="#services"
               >
                 {navbar.menus[3]}
               </a>
@@ -63,7 +57,7 @@ export default function NavigationBar() {
               <a
                 className="navbars__link"
                 rel="noopener noreferrer"
-                href="#services"
+                href="#portfolio"
               >
                 {navbar.menus[2]}
               </a>
@@ -115,7 +109,7 @@ export default function NavigationBar() {
               <a
                 className="navbars__link"
                 rel="noopener noreferrer"
-                href="#portofolio"
+                href="#portfolio"
               >
                 {navbar.menus[2]}
               </a>

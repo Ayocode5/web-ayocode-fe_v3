@@ -1,5 +1,5 @@
 // Inggris
-export const getEnOurServices = () => {
+const getEnOurServices = () => {
   return [
     {
       id: 1,
@@ -87,7 +87,8 @@ export const getEnOurServices = () => {
     },
   ];
 };
-export const getEnListPortofolio = () => {
+
+const getEnListPortofolio = () => {
   return [
     {
       id: 1,
@@ -132,7 +133,7 @@ export const getEnListPortofolio = () => {
   ];
 };
 
-export const getListClient = () => {
+const getListClient = () => {
   return [
     {
       id: 1,
@@ -146,7 +147,8 @@ export const getListClient = () => {
     },
   ];
 };
-export const getAgents = () => {
+
+const getAgents = () => {
   return [
     {
       id: 1,
@@ -251,7 +253,7 @@ export const getEnLanguage = () => {
 };
 
 // Indonesia
-export const getIdOurServices = () => {
+const getIdOurServices = () => {
   return [
     {
       id: 1,
@@ -340,7 +342,7 @@ export const getIdOurServices = () => {
   ];
 };
 
-export const getIdListPortofolio = () => {
+const getIdListPortofolio = () => {
   return [
     {
       id: 1,

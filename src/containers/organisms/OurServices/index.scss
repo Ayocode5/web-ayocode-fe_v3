@@ -1,13 +1,19 @@
 @use "../../../assets/scss/color.scss" as colors;
 @use "../../../assets/scss/config.scss" as config;
 @use "../../../assets/scss/mixin.scss" as mixin;
-
+/*  ==================
+    Style for Services
+    ================== */
 $color-slider-1: rgba(157, 124, 195, 0.5);
 $color-slider-2: map-get(colors.$color-tertiary, "10");
 $color-slider-3: map-get(colors.$color-warning, "30");
 $color-slider-pagination: map-get(colors.$color-primary, "90");
 $color-slider-pagination-active: map-get(colors.$color-secondary, "50");
 
+// ---------------------------
+// Main Services
+// Mobile
+// ---------------------------
 .services {
   position: relative;
   text-align: center;
@@ -18,14 +24,11 @@ $color-slider-pagination-active: map-get(colors.$color-secondary, "50");
 
   &__item {
     margin-top: 115px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $color-slider-1;
-    border-radius: 10px;
     padding: 0 16px;
     padding-bottom: 40px;
+    @include mixin.flex-display(column, space-between, center);
+    background-color: $color-slider-1;
+    border-radius: 10px;
 
     &-header {
       flex: 1;
@@ -59,6 +62,10 @@ $color-slider-pagination-active: map-get(colors.$color-secondary, "50");
   }
 }
 
+// ---------------------------
+// Main Services Menu
+// Tablet > 834px
+// ---------------------------
 @media screen and (min-width: #{config.$breakpoint-tablet}px) {
   .services {
     text-align: left;
@@ -83,16 +90,16 @@ $color-slider-pagination-active: map-get(colors.$color-secondary, "50");
       }
     }
     &__item {
-      display: flex;
-      flex-direction: row;
       margin-top: 0;
       padding: 40px 32px;
+      display: flex;
+      flex-direction: row;
       height: 364px;
       border: 4px solid map-get(colors.$color-secondary, "50");
       &-header {
         width: 45%;
-        order: 2;
         height: 100%;
+        order: 2;
         transform: translateY(0);
         img {
           width: 100%;
@@ -106,27 +113,29 @@ $color-slider-pagination-active: map-get(colors.$color-secondary, "50");
       &-list-badage {
         margin-top: 24px;
         display: flex;
-        row-gap: 8px;
         flex-direction: column;
+        row-gap: 8px;
       }
       &-badage {
         margin: 0;
         display: flex;
         flex-direction: row;
-        column-gap: 1rem;
         align-items: center;
+        column-gap: 1rem;
         max-width: 100%;
       }
     }
   }
 }
 
+// ---------------------------
+// Main Services Menu
+// Desktop > 1366px
+// ---------------------------
 @media screen and (min-width: #{config.$breakpoint-desktop}px) {
   .services {
     &__item {
       height: 400px;
-      &-header {
-      }
     }
   }
 }

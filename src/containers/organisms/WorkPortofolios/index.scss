@@ -2,11 +2,18 @@
 @use "../../../assets/scss/config" as config;
 @use "../../../assets/scss/mixin" as mixin;
 @use "../../../assets/scss/font" as fonts;
+/*  ===================
+    Style for Portfolios
+    =================== */
 
-.portofolios {
+// ---------------------------
+// Main Portfolio
+// Mobile
+// ---------------------------
+.portfolio {
   margin: 0 35px;
 
-  .portfolio__list {
+  &__list {
     margin-top: 2.5rem;
     /* Style Slider portofolio */
     &-item {
@@ -129,9 +136,9 @@
 // tablet > 834px
 // ---------------------------
 @media (min-width: #{config.$breakpoint-tablet}px) {
-  .portofolios {
+  .portfolio {
     text-align: left;
-    .portfolio__list {
+    &__list {
       margin-top: 3.5rem;
 
       /* Style Slider portofolio */
@@ -186,8 +193,8 @@
 //  Desktop > 1366x
 // ---------------------------
 @media (min-width: #{config.$breakpoint-desktop}px) {
-  .portofolios {
-    .portfolio__list {
+  .portfolio {
+    &__list {
       /* Style Slider portofolio */
       &-item {
         figure {

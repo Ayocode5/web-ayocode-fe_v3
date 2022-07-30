@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tagline = ({ text }) => {
+export default function Tagline({ text }) {
   return (
     <div className="tagline">
       <div className="tagline-brand">
@@ -12,6 +12,4 @@ const Tagline = ({ text }) => {
       </h2>
     </div>
   );
-};
-
-export default Tagline;
+}

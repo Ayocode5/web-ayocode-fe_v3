@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 import AnimatedCursor from "react-animated-cursor";
-
 import Jumbotron from "../../organisms/Jumbotron";
 import OurServices from "../../organisms/OurServices";
 import WaveAnimation from "../../../components/atoms/WaveAnimation";
@@ -9,6 +8,7 @@ import WorkPortofolios from "../../organisms/WorkPortofolios";
 import OurFormerClients from "../../organisms/OurFormerClients";
 import Agents from "../../organisms/Agents";
 import Contact from "../../organisms/Contact";
+import NavigationFooter from "../../organisms/NavigationFooter";
 import { configAnimationCursor } from "../../../utils/utils";
 
 // Import Swiper styles
@@ -18,12 +18,10 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
-
 import "./index.scss";
-import NavigationFooter from "../../organisms/NavigationFooter";
 
 export default function Home() {
-  const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
+  const isDesktop = useMediaQuery(1366);
 
   const [language, setLanguage] = useState("Eng");
 
@@ -35,7 +33,7 @@ export default function Home() {
 
   return (
     <>
-      {isDesktopOrLaptop ? (
+      {isDesktop ? (
         <>
           {/* Desktop */}
           <AnimatedCursor {...configAnimationCursor} />

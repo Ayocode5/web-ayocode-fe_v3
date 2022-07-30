@@ -7,13 +7,11 @@ import {
 } from "react-icons/io5";
 import WaveAnimation from "../../../components/atoms/WaveAnimation";
 import SocialMedia from "../../../components/atoms/SocialMedia";
-
 import "./index.scss";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export default function Footer() {
   const isTablet = useMediaQuery(834);
-
   return (
     <footer id="footer">
       <div className="footer">
