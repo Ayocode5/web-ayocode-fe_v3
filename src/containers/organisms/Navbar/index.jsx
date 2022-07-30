@@ -19,6 +19,11 @@ export default function NavigationBar() {
   const isDesktop = useMediaQuery(1366);
   /* Get content language from redux state */
   const { navbar } = dataLanguage;
+
+  const handleClick = () => {
+    dispatch(setIsOpen(false));
+    console.log("handleClick");
+  };
   useEffect(() => {
     if (isDesktop) dispatch(setIsOpen(false));
   }, [dispatch, isDesktop]);
@@ -92,12 +97,18 @@ export default function NavigationBar() {
 
           <ul className="navbars__menu">
             <li className="navbars__item">
-              <a className="navbars__link" rel="noopener noreferrer" href="#">
+              <a
+                onClick={handleClick}
+                className="navbars__link"
+                rel="noopener noreferrer"
+                href="#"
+              >
                 {navbar.menus[0]}
               </a>
             </li>
             <li className="navbars__item">
               <a
+                onClick={handleClick}
                 className="navbars__link"
                 rel="noopener noreferrer"
                 href="#about"
@@ -107,6 +118,7 @@ export default function NavigationBar() {
             </li>
             <li className="navbars__item">
               <a
+                onClick={handleClick}
                 className="navbars__link"
                 rel="noopener noreferrer"
                 href="#portfolio"
@@ -116,6 +128,7 @@ export default function NavigationBar() {
             </li>
             <li className="navbars__item">
               <a
+                onClick={handleClick}
                 className="navbars__link"
                 rel="noopener noreferrer"
                 href="#services"
@@ -125,6 +138,7 @@ export default function NavigationBar() {
             </li>
             <li className="navbars__item">
               <a
+                onClick={handleClick}
                 className="navbars__link"
                 rel="noopener noreferrer"
                 href="#blog"
