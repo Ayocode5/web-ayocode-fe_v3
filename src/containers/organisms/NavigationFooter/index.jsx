@@ -19,7 +19,7 @@ export default function NavigationFooter() {
           </a>
         </li>
         <li>
-          <a className="nav-footer__link" href="#service">
+          <a className="nav-footer__link" href="#services">
             Services
           </a>
         </li>
