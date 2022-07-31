@@ -129,6 +129,14 @@ $color-text__jumbotrons-dark: map-get(colors.$color-neutral, "50");
   .jumbotrons {
     margin: 0 4.688rem;
     margin-top: 14.688rem;
+    .tagline {
+      .tagline-brand {
+        font-size: 1.5rem;
+      }
+      .tagline-text {
+        font-size: 3rem;
+      }
+    }
   }
 }
 
@@ -154,7 +162,7 @@ $color-text__jumbotrons-dark: map-get(colors.$color-neutral, "50");
         }
       }
       .tagline-text {
-        font-size: 60px;
+        font-size: 3.75rem;
         max-width: 598px;
         line-height: 70px;
       }
