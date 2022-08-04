@@ -1,5 +1,5 @@
 import React from "react";
-import ListClient from "../../../components/molecules/ListClient";
+import ListClient from "./ListClient/ListClient";
 import { useSelector } from "react-redux";
 
 import "./index.scss";

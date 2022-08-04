@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import OurServiceList from "../../../components/molecules/OurServiceList";
+import ListService from "./ListService/ListService";
 import "./index.scss";
 
 export default function OurServices() {
@@ -10,7 +10,7 @@ export default function OurServices() {
     <section className="services container-section" id="services">
       <h4 className="section__title">{services.title}</h4>
       <p className="section__subtitle">{services.subTitle}</p>
-      <OurServiceList services={services.data} />
+      <ListService services={services.data} />
     </section>
   );
 }

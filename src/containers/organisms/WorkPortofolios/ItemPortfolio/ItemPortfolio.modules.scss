@@ -1,0 +1,102 @@
+@use "../../../../assets/scss/color.scss" as colors;
+@use "../../../../assets/scss/config.scss" as config;
+@use "../../../../assets/scss/font.scss" as fonts;
+
+.portfolio__list-item {
+  width: 100%;
+
+  figure {
+    position: relative;
+    background-color: map-get(colors.$color-secondary, "50");
+    width: 100%;
+    height: 100%;
+    min-height: 15.625rem;
+    border-radius: 10px;
+
+    & * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+    figcaption {
+      position: absolute;
+      width: 50%;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      padding: 20px 0 20px 20px;
+      p,
+      a {
+        margin: 0;
+        width: 100%;
+        -webkit-transform: translateX(20px);
+        transform: translateX(20px);
+        opacity: 0;
+      }
+      a {
+        color: map-get(colors.$color-tertiary, "50");
+        display: block;
+        font-weight: fonts.$medium-font-weight;
+        font-size: 0.625rem;
+      }
+      p {
+        color: map-get(colors.$color-primary, "10");
+        font-weight: fonts.$semiBold-font-weight;
+        font-size: 1rem;
+      }
+    }
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+    &:hover {
+      figcaption {
+        p,
+        a {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
+      img {
+        width: 45%;
+        height: 55%;
+      }
+    }
+  }
+}
+
+@media (min-width: #{config.$breakpoint-tablet}px) {
+  /* Style Slider portofolio */
+  .portfolio__list-item {
+    figure {
+      min-height: 25rem;
+      figcaption {
+        line-height: 3rem;
+        a {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: #{config.$breakpoint-desktop}px) {
+  .portfolio__list-item-item {
+    figure {
+      min-height: 31.25rem;
+    }
+  }
+}

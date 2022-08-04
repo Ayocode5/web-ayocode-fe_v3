@@ -1,16 +1,16 @@
 import React from "react";
-import ListPortofolio from "../../../components/molecules/ListPortofolio";
-import "./index.scss";
+import ListPortfolio from "./ListPortfolio/ListPortfoflio";
 import { useSelector } from "react-redux";
 
+import "./index.scss";
 export default function WorkPortofolios() {
   const { dataLanguage } = useSelector((state) => state.navbar);
-  const { portofolios } = dataLanguage;
+  const { portfolios } = dataLanguage;
   return (
     <section className="portfolio container-section" id="portfolio">
-      <h3 className="section__title">{portofolios.title}</h3>
-      <p className="section__subtitle">{portofolios.subTitle}</p>
-      <ListPortofolio portofolios={portofolios.data} />
+      <h3 className="section__title">{portfolios.title}</h3>
+      <p className="section__subtitle">{portfolios.subTitle}</p>
+      <ListPortfolio portfolios={portfolios.data} />
     </section>
   );
 }

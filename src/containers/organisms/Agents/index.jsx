@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import ListAgent from "../../../components/molecules/ListAgent";
+import ListAgent from "./ListAgent/ListAgent";
 import "./index.scss";
 
 export default function Agents() {

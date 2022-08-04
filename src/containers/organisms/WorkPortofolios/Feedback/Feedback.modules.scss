@@ -1,0 +1,58 @@
+@use "../../../../assets/scss/color.scss" as colors;
+@use "../../../../assets/scss/config.scss" as config;
+
+.portfolio__list-feedback {
+  margin-top: 40px;
+  color: map-get(colors.$color-neutral, "50");
+
+  &-item {
+    color: map-get(colors.$color-neutral, "50");
+    text-align: center;
+    .feedback {
+      font-size: 1rem;
+      line-height: 22.4px;
+      font-weight: 400;
+    }
+    .feedback-respondent {
+      margin-top: 2rem;
+      h4 {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// ---------------------------
+// Work And Portofolios
+// tablet > 834px
+// ---------------------------
+@media (min-width: #{config.$breakpoint-tablet}px) {
+  .portfolio__list-feedback {
+    margin-top: 40px;
+    color: map-get(colors.$color-neutral, "50");
+
+    &-item {
+      text-align: left;
+      .feedback {
+        font-size: 1rem;
+        line-height: 22.4px;
+      }
+      .feedback-respondent {
+        margin-top: 2rem;
+        h4 {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------
+// Work And Portofolios
+//  Desktop > 1366x
+// ---------------------------
+@media (min-width: #{config.$breakpoint-desktop}px) {
+}

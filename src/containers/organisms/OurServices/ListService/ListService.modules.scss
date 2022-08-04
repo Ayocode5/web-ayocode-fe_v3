@@ -1,0 +1,50 @@
+@use "../../../../assets/scss/color.scss" as colors;
+@use "../../../../assets/scss/config.scss" as config;
+/*  ==================
+    Style for Services
+    ================== */
+
+$color-slider-pagination: map-get(colors.$color-primary, "90");
+$color-slider-pagination-active: map-get(colors.$color-secondary, "50");
+
+// ---------------------------
+// Main Services
+// Mobile
+// ---------------------------
+.services__list {
+  margin-top: 8.125rem;
+}
+
+// ---------------------------
+// Main Services Menu
+// Tablet > 834px
+// ---------------------------
+@media screen and (min-width: #{config.$breakpoint-tablet}px) {
+  .services__list {
+    margin-top: 3.5rem;
+
+    .swiper {
+      .swiper-pagination {
+        position: sticky;
+        bottom: -14px;
+        &-bullet {
+          background-color: $color-slider-pagination;
+          transition: all 0.3s ease-in-out;
+        }
+        &-bullet-active {
+          width: 40px;
+          height: 8px;
+          background-color: $color-slider-pagination-active;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------
+// Main Services Menu
+// Desktop > 1366px
+// ---------------------------
+@media screen and (min-width: #{config.$breakpoint-desktop}px) {
+}

@@ -88,7 +88,7 @@ const getEnOurServices = () => {
   ];
 };
 
-const getEnListPortofolio = () => {
+const getEnListPortfolio = () => {
   return [
     {
       id: 1,
@@ -206,7 +206,7 @@ const getAgents = () => {
 export const getEnLanguage = () => {
   return {
     navbar: {
-      menus: ["Home", "About Us", "Portofolios", "Services", "Blog"],
+      menus: ["Home", "About Us", "Portfolios", "Services", "Blog"],
       button: "Start a Project ?",
     },
     jumbotron: {
@@ -218,11 +218,11 @@ export const getEnLanguage = () => {
       subTitle: "Let's take a look at what we can do for you",
       data: getEnOurServices(),
     },
-    portofolios: {
+    portfolios: {
       title: "Work & Testimonials",
       subTitle:
         'The sky ain\'t need to explain that he is tall, We believe that you can judge our quality just by seeing "The result" of our work.',
-      data: getEnListPortofolio(),
+      data: getEnListPortfolio(),
     },
     clients: {
       title: "Our Former Clients",
@@ -244,7 +244,7 @@ export const getEnLanguage = () => {
     navFooter: {
       title: "Ayocode.id",
       subTitle: "Your Best Agency Solution, Based in Jakarta Barat",
-      menus: ["Home", "About Us", "Portofolios", "Services", "Blog"],
+      menus: ["Home", "About Us", "portfolios", "Services", "Blog"],
     },
     footer: {
       socialMedia: "Follow Us On:",
@@ -342,7 +342,7 @@ const getIdOurServices = () => {
   ];
 };
 
-const getIdListPortofolio = () => {
+const getIdListPortfolio = () => {
   return [
     {
       id: 1,
@@ -390,7 +390,7 @@ const getIdListPortofolio = () => {
 export const getIdLanguage = () => {
   return {
     navbar: {
-      menus: ["Beranda", "Tentang Kami", "Portofolio", "Layanan", "Artikel"],
+      menus: ["Beranda", "Tentang Kami", "Portfolio", "Layanan", "Artikel"],
       button: "Memulai proyek ?",
     },
     jumbotron: {
@@ -402,11 +402,11 @@ export const getIdLanguage = () => {
       subTitle: "Mari kita lihat apa yang bisa kami lakukan untuk Anda",
       data: getIdOurServices(),
     },
-    portofolios: {
+    portfolios: {
       title: "Karya & Testimoni",
       subTitle:
         'Langit tidak perlu menjelaskan bahwa dia tinggi, Kami percaya bahwa Anda dapat menilai kualitas kami hanya dengan melihat "Hasil" pekerjaan kami.',
-      data: getIdListPortofolio(),
+      data: getIdListPortfolio(),
     },
     clients: {
       title: "Mantan Klien Kami",
@@ -428,7 +428,7 @@ export const getIdLanguage = () => {
     navFooter: {
       title: "Ayocode.id",
       subTitle: "Solusi Agensi Terbaik Anda, Berbasis di Jakarta Barat",
-      menus: ["Beranda", "Tentang Kami", "Portofolio", "Layanan", "Artikel"],
+      menus: ["Beranda", "Tentang Kami", "Portfolio", "Layanan", "Artikel"],
     },
     footer: {
       socialMedia: "Ikuti kami di:",
