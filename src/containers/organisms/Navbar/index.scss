@@ -7,8 +7,6 @@
     ================ */
 $navbar__item-color: map-get(colors.$color-primary, "10");
 $navbar__item-active-color: map-get(colors.$color-secondary, "50");
-$navbar__hamburger-color: map-get(colors.$color-neutral, "50");
-$navbar__toggler-color: map-get(colors.$color-secondary, "30");
 $navbar__splash-color: map-get(colors.$color-secondary, "10");
 
 // Font size for navbar
@@ -50,116 +48,12 @@ $navbar__font-weight: fonts.$semiBold-font-weight;
         color: $navbar__item-active-color;
       }
     }
-    .toggle-switch-lang {
-      cursor: pointer;
-      display: flex;
-
-      &__checkbox {
-        opacity: 0;
-      }
-
-      &__label {
-        position: relative;
-        padding: 8px 16px;
-        background-color: $navbar__toggler-color;
-        border-radius: 30px;
-        border: 1px solid #e3dfd9;
-      }
-      &__ball {
-        position: absolute;
-        width: 22px;
-        top: 7px;
-        left: 15px;
-        height: 22px;
-        background-color: $navbar__toggler-color;
-        border-radius: 50%;
-        transition: all 0.3s ease-in;
-
-        &::before {
-          content: "EN";
-          position: absolute;
-          left: 0;
-          right: 0;
-          font-size: 14px;
-          text-align: center;
-          color: $navbar__item-color;
-        }
-      }
-      &__flag {
-        width: 20px;
-        height: 20px;
-      }
-      &__flags {
-        display: flex;
-        column-gap: 8px;
-      }
-      .switch-to-id {
-        transform: translateX(28px);
-        &::before {
-          content: "ID";
-        }
-      }
-    }
-  }
-
-  &__logo {
-    @include mixin.flex-display(row, space-between, center);
-    width: 100%;
-    z-index: 9;
-    .image-brand {
-      @include mixin.icon-sizing(
-        map-get(config.$icon-size, "48"),
-        map-get(config.$icon-size, "48")
-      );
-      align-self: flex-start;
-    }
-  }
-
-  // Hamburger Menu
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    width: 45px;
-    z-index: 9;
-    cursor: pointer;
-
-    span {
-      background: $navbar__hamburger-color;
-      border-radius: 10px;
-      height: 5px;
-      margin: 5px 0;
-      transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-    }
-    span:nth-of-type(1) {
-      width: 50%;
-    }
-    span:nth-of-type(2) {
-      width: 100%;
-    }
-    span:nth-of-type(3) {
-      width: 75%;
-    }
-
-    &.open {
-      span:nth-of-type(1) {
-        transform-origin: bottom;
-        transform: rotatez(46deg) translate(6px, 1.3px);
-      }
-      span:nth-of-type(2) {
-        transform-origin: top;
-        transform: rotatez(-46deg);
-      }
-      span:nth-of-type(3) {
-        transform-origin: bottom;
-        width: 60%;
-        transform: translate(15.5px, -10px) rotatez(46deg);
-      }
-    }
   }
 
   &__button {
     @include mixin.button-start();
     width: 100%;
+    font-size: 1.25rem;
   }
 
   // Background splash Navbar Menu
@@ -222,6 +116,7 @@ $navbar__font-weight: fonts.$semiBold-font-weight;
   .navbars {
     margin: 0 4.688rem;
     margin-top: 4.5rem;
+    font-size: 1.875rem;
   }
 }
 
@@ -234,15 +129,7 @@ $navbar__font-weight: fonts.$semiBold-font-weight;
     margin: 0 auto;
     margin-top: 2rem;
     flex-direction: row;
-    &__logo {
-      width: auto;
-      .image-brand {
-        @include mixin.icon-sizing(
-          map-get(config.$icon-size, "64"),
-          map-get(config.$icon-size, "64")
-        );
-      }
-    }
+    font-size: 1.25rem;
     &__menu {
       position: unset;
       flex-direction: row;
@@ -256,8 +143,10 @@ $navbar__font-weight: fonts.$semiBold-font-weight;
         color: map-get(colors.$color-neutral, "50");
       }
     }
-    .hamburger {
-      display: none;
+    &__button {
+      width: 168px;
+      height: 40px;
+      font-size: 1rem;
     }
   }
 }

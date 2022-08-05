@@ -6,7 +6,7 @@ import {
   IoMailOutline,
 } from "react-icons/io5";
 import { BsArrowUpRight } from "react-icons/bs";
-import Tagline from "../../../components/atoms/Tagline";
+import Tagline from "./Tagline/Tagline";
 import SocialMedia from "../../../components/atoms/SocialMedia";
 import Buttons from "../../../components/atoms/Buttons";
 import color from "../../../assets/scss/_color.scss";

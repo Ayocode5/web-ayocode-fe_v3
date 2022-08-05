@@ -1,0 +1,74 @@
+@use "../../../../assets/scss/color.scss" as colors;
+@use "../../../../assets/scss/config.scss" as config;
+
+$navbar__hamburger-color: map-get(colors.$color-neutral, "50");
+
+// Hamburger Menu
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  width: 45px;
+  z-index: 9;
+  cursor: pointer;
+
+  span {
+    background: $navbar__hamburger-color;
+    border-radius: 10px;
+    height: 5px;
+    margin: 5px 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+  span:nth-of-type(1) {
+    width: 50%;
+  }
+  span:nth-of-type(2) {
+    width: 100%;
+  }
+  span:nth-of-type(3) {
+    width: 75%;
+  }
+
+  &.open {
+    span:nth-of-type(1) {
+      transform-origin: bottom;
+      transform: rotatez(46deg) translate(6px, 1.3px);
+    }
+    span:nth-of-type(2) {
+      transform-origin: top;
+      transform: rotatez(-46deg);
+    }
+    span:nth-of-type(3) {
+      transform-origin: bottom;
+      width: 60%;
+      transform: translate(15.5px, -10px) rotatez(46deg);
+    }
+  }
+}
+
+@media screen and (min-width: #{config.$breakpoint-tablet}px) {
+  .hamburger {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    span {
+      height: 6px;
+    }
+
+    &.open {
+      span:nth-of-type(1) {
+        transform: rotatez(46deg) translate(13px, 1.3px);
+      }
+      span:nth-of-type(3) {
+        transform: translate(27px, -14px) rotatez(46deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: #{config.$breakpoint-desktop}px) {
+  .hamburger {
+    display: none;
+  }
+}

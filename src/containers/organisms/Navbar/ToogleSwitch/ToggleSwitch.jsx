@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleLanguage } from "../../config/redux/reducers/navbarReducer";
+import { toggleLanguage } from "../../../../config/redux/reducers/navbarReducer";
+
+import "./ToggleSwitch.modules.scss";
 
 export default function ToggleSwitch() {
   const { switchChecked } = useSelector((state) => state.navbar);

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Brand.modules.scss";
+
 export default function Brand({ logoImage, logoText }) {
   return (
     <>

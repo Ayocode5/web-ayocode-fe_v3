@@ -1,0 +1,56 @@
+@use "../../../../assets/scss/color.scss" as colors;
+
+$navbar__item-color: map-get(colors.$color-primary, "10");
+$navbar__toggler-color: map-get(colors.$color-secondary, "30");
+
+.toggle-switch-lang {
+  cursor: pointer;
+  display: flex;
+
+  &__checkbox {
+    opacity: 0;
+  }
+
+  &__label {
+    position: relative;
+    padding: 8px 16px;
+    background-color: $navbar__toggler-color;
+    border-radius: 30px;
+    border: 1px solid #e3dfd9;
+  }
+  &__ball {
+    position: absolute;
+    width: 22px;
+    top: 7px;
+    left: 15px;
+    height: 22px;
+    background-color: $navbar__toggler-color;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+
+    &::before {
+      content: "EN";
+      position: absolute;
+      left: 0;
+      right: 0;
+      font-size: 14px;
+      text-align: center;
+      color: $navbar__item-color;
+    }
+  }
+  &__flag {
+    width: 20px;
+    height: 20px;
+  }
+  &__flags {
+    display: flex;
+    column-gap: 8px;
+  }
+  .switch-to-id {
+    transform: translateX(28px);
+    &::before {
+      content: "ID";
+      font-size: 14px;
+    }
+  }
+}

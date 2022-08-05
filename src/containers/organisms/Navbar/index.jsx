@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from "react";
-import useMediaQuery from "../../../hooks/useMediaQuery";
-import { useSelector, useDispatch } from "react-redux";
 import { setIsOpen } from "../../../config/redux/reducers/navbarReducer";
 import { BsArrowUpRight } from "react-icons/bs";
-import Brand from "../../../components/atoms/Brand";
-import ToggleSwitch from "../../../components/atoms/ToggleSwitch";
-import Hamburger from "../../../components/atoms/Hamburger";
+import { useSelector, useDispatch } from "react-redux";
+import useMediaQuery from "../../../hooks/useMediaQuery";
+import Brand from "./Brand/Brand";
+import ToggleSwitch from "./ToogleSwitch/ToggleSwitch";
+import Hamburger from "./Hamburger/Hamburger";
 import Buttons from "../../../components/atoms/Buttons";
 import imgLogoAyocode from "../../../assets/img/logos/logo-ayocode.svg";
 import "./index.scss";
@@ -29,7 +29,7 @@ export default function NavigationBar() {
   return (
     <>
       {isDesktop ? (
-        <nav className={`navbars ${isOpen ? "navbars-open" : null}`}>
+        <nav className={`navbars ${isOpen ? "navbars-open" : ""}`}>
           <ul className="navbars__menu">
             <li className="navbars__item">
               <ToggleSwitch />

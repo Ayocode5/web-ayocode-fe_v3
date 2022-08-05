@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Tagline.modules.scss";
+
 export default function Tagline({ text }) {
   return (
     <div className="tagline">

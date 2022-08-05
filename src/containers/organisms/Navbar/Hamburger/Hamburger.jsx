@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleHamburger } from "../../config/redux/reducers/navbarReducer";
+import { toggleHamburger } from "../../../../config/redux/reducers/navbarReducer";
 
+import "./Hamburger.modules.scss";
 export default function Hamburger() {
   const { isOpen } = useSelector((state) => state.navbar);
   const dispatch = useDispatch();
