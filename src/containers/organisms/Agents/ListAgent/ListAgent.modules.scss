@@ -107,7 +107,9 @@
 // ---------------------------
 @media screen and (min-width: #{config.$breakpoint-tablet}px) {
   .agents__list {
+    margin: 0 auto;
     margin-top: 3.5rem;
+    max-width: 684px;
 
     .swiper {
       padding-bottom: 24px;
@@ -139,7 +141,7 @@
     }
 
     .swiper-slide:hover {
-      width: 25% !important;
+      width: 35% !important;
     }
   }
 }

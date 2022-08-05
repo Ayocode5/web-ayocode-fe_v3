@@ -10,10 +10,13 @@ export default function ListAgent({ listAgent }) {
   const configSwiperAgents = {
     modules: [Scrollbar],
     slidesPerView: 4,
+    centeredSlides: true,
     scrollbar: {
       hide: false,
     },
+    grabCursor: true,
     spaceBetween: 20,
+    mousewheel: true,
   };
 
   return (

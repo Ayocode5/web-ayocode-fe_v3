@@ -18,6 +18,14 @@
 // Tablet > 834px
 // ---------------------------
 @media screen and (min-width: #{config.$breakpoint-tablet}px) {
+  .agents {
+    .section__title {
+      text-align: center;
+    }
+    .section__subtitle {
+      text-align: center;
+    }
+  }
 }
 
 // ---------------------------
