@@ -74,6 +74,9 @@ img {
   margin-bottom: 0.5rem;
   color: fonts.$title-color;
   text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
 }
 
 .section__subtitle {
@@ -96,12 +99,14 @@ nav {
     font-size: fonts.$h3-font-size;
     line-height: 31.2px;
     text-align: left;
+    margin-left: 29px;
   }
 
   .section__subtitle {
     font-size: 30px;
     line-height: 39px;
     text-align: left;
+    margin-left: 29px;
   }
   .container-section {
     margin: 0 4.688rem;

@@ -28,6 +28,15 @@ $color-slider-3: map-get(colors.$color-warning, "30");
     height: 176px;
     transform: translateY(-80px);
   }
+  &-content {
+    color: map-get(colors.$color-neutral, "50");
+    h4 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-weight: 400;
+    }
+  }
 
   &-list-badage {
     margin-top: 36px;
@@ -39,6 +48,11 @@ $color-slider-3: map-get(colors.$color-warning, "30");
   &-badage {
     max-width: 184px;
     margin: 0 auto;
+    font-weight: 400;
+    img {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &.item-1 {
@@ -78,6 +92,13 @@ $color-slider-3: map-get(colors.$color-warning, "30");
 
     &-content {
       width: 55%;
+      h4 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+      }
+      p {
+        font-weight: 400;
+      }
     }
     &-list-badage {
       margin-top: 24px;
