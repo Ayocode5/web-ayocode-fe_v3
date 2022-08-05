@@ -9,7 +9,13 @@
 // ---------------------------
 .clients {
   &__list {
-    margin-top: 3.5rem;
+    margin-top: 56px;
+    .swiper-wrapper {
+      justify-content: space-around;
+    }
+    .swiper-slide {
+      max-width: 100px;
+    }
     &-item {
       img {
         margin: 0 auto;
@@ -24,6 +30,19 @@
 // tablet > 834px
 // ---------------------------
 @media screen and (min-width: #{config.$breakpoint-tablet}px) {
+  .clients {
+    &__list {
+      .swiper-wrapper {
+        justify-content: center;
+        gap: 64px;
+      }
+      &-item {
+        img {
+          min-height: 100px;
+        }
+      }
+    }
+  }
 }
 
 // ---------------------------
