@@ -30,7 +30,7 @@
 // ---------------------------
 @media (min-width: #{config.$breakpoint-tablet}px) {
   .portfolio__list-feedback {
-    margin-top: 40px;
+    margin-top: 56px;
     color: map-get(colors.$color-neutral, "50");
 
     &-item {
