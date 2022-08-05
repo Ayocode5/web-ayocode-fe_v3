@@ -2,17 +2,9 @@
 @use "../../../../assets/scss/config" as config;
 @use "../../../../assets/scss/mixin" as mixin;
 
-/*  ==================
-    Style for Services
-    ================== */
 $color-slider-1: rgba(157, 124, 195, 0.5);
 $color-slider-2: map-get(colors.$color-tertiary, "10");
 $color-slider-3: map-get(colors.$color-warning, "30");
-
-// ---------------------------
-// Main Services
-// Mobile
-// ---------------------------
 
 .services__item {
   margin-top: 115px;

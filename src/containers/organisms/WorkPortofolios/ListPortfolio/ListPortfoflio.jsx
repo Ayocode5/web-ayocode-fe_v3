@@ -40,7 +40,7 @@ export default function ListPortfolio({ portfolios }) {
 
   const configSwiperThumb = {
     modules: [Controller, Thumbs],
-    slidesPerView: 2,
+    slidesPerView: "auto",
     onSwiper: setActiveThumb,
     spaceBetween: 10,
     breakpoints: {

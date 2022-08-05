@@ -6,6 +6,9 @@
   /* Style Thumbnail slider portofolio */
   &-thumbnail {
     margin-top: 16px;
+    .swiper-slide {
+      max-width: 120px;
+    }
     .swiper-slide-thumb-active {
       border: 6px solid #371b58;
       border-radius: 20px;
@@ -30,8 +33,12 @@
 
     /* Style Thumbnail slider portofolio */
     &-thumbnail {
+      .swiper-slide {
+        max-width: unset;
+      }
       img {
-        max-height: 9.75rem;
+        min-height: 9.75rem;
+        max-height: 10rem;
       }
     }
   }

@@ -1,16 +1,9 @@
 @use "../../../../assets/scss/color.scss" as colors;
 @use "../../../../assets/scss/config.scss" as config;
-/*  ==================
-    Style for Services
-    ================== */
 
 $color-slider-pagination: map-get(colors.$color-primary, "90");
 $color-slider-pagination-active: map-get(colors.$color-secondary, "50");
 
-// ---------------------------
-// Main Services
-// Mobile
-// ---------------------------
 .services__list {
   margin-top: 8.125rem;
 }
