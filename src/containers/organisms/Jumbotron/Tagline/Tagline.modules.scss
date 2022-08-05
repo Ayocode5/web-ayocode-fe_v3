@@ -12,6 +12,7 @@ $color-text__jumbotrons-dark: map-get(colors.$color-neutral, "50");
 
   .tagline-brand {
     font-weight: font.$small-font-weight;
+    font-size: 1rem;
   }
 
   .tagline-text {
@@ -75,7 +76,10 @@ $color-text__jumbotrons-dark: map-get(colors.$color-neutral, "50");
       font-size: 1.5rem;
     }
     .tagline-text {
-      font-size: 3rem;
+      margin-top: 64px;
+      line-height: 60px;
+      font-size: 3.125rem;
+      max-width: 469px;
     }
   }
 }
@@ -83,7 +87,7 @@ $color-text__jumbotrons-dark: map-get(colors.$color-neutral, "50");
 @media screen and (min-width: #{config.$breakpoint-desktop}px) {
   .tagline {
     .tagline-brand {
-      font-size: 30px;
+      font-size: 1.875rem;
       line-height: 39px;
       @include mixin.flex-display(row, space-between, center);
       max-width: 550px;
@@ -95,8 +99,8 @@ $color-text__jumbotrons-dark: map-get(colors.$color-neutral, "50");
     }
     .tagline-text {
       font-size: 3.75rem;
-      max-width: 598px;
-      line-height: 70px;
+      max-width: 563px;
+      line-height: 72px;
     }
   }
 }
