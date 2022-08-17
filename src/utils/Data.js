@@ -190,16 +190,6 @@ const getAgents = () => {
       },
       desc: "Jonathan",
     },
-    {
-      id: 5,
-      urlImage: "./images/thumbs/thumb-agent5.png",
-      socialMedia: {
-        instagram: "https://www.instagram.com/",
-        whatsApp: "https://wa.me/",
-        gmail: "https://mail.google.com/",
-      },
-      desc: "Fikri",
-    },
   ];
 };
 

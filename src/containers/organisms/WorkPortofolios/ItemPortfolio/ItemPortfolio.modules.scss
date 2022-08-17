@@ -8,9 +8,6 @@
   figure {
     position: relative;
     background-color: map-get(colors.$color-secondary, "50");
-    width: 100%;
-    height: 100%;
-    min-height: 15.625rem;
     border-radius: 10px;
 
     & * {
@@ -31,32 +28,28 @@
       a {
         margin: 0;
         width: 100%;
-        -webkit-transform: translateX(20px);
-        transform: translateX(20px);
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
         opacity: 0;
       }
       a {
         color: map-get(colors.$color-tertiary, "50");
         display: block;
         font-weight: fonts.$medium-font-weight;
-        font-size: 0.625rem;
+        font-size: 3vw;
       }
       p {
         color: map-get(colors.$color-primary, "10");
         font-weight: fonts.$semiBold-font-weight;
-        font-size: 1rem;
+        font-size: 4vw;
       }
     }
     img {
-      position: absolute;
-      right: 0;
-      top: 0;
-      top: 50%;
       width: 100%;
-      height: 100%;
+      min-height: 10rem;
+      max-height: 27rem;
       border-radius: 10px;
       opacity: 1;
-      transform: translate(0, -50%);
     }
     &:hover {
       figcaption {
@@ -68,8 +61,7 @@
         }
       }
       img {
-        width: 45%;
-        height: 55%;
+        transform: translate(22%, 0) scale(0.5);
       }
     }
   }
@@ -79,7 +71,6 @@
   /* Style Slider portofolio */
   .portfolio__list-item {
     figure {
-      min-height: 25rem;
       figcaption {
         line-height: 3rem;
         a {
@@ -89,6 +80,10 @@
           font-size: 3rem;
         }
       }
+      img {
+        min-height: 27rem;
+        max-height: 42rem;
+      }
     }
   }
 }
@@ -97,6 +92,10 @@
   .portfolio__list-item-item {
     figure {
       min-height: 31.25rem;
+    }
+    img {
+      min-height: 42rem;
+      max-height: 44rem;
     }
   }
 }
